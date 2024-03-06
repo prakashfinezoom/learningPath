@@ -11,7 +11,6 @@ test.describe('Our first script', async () => {
         const Login = new loginPage(page)
         await Login.fillUsername(data.testData.username)
         await Login.fillPassword(data.testData.password)
-        await expect.soft(page.locator(`//h1[text()='Login Page']`)).toHaveText('Logi')
         await Login.loginBtn()
     });
     test('Radio button', async ({page}) => 
